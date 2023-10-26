@@ -1,0 +1,13 @@
+
+
+COMPILE WITH: c++ -Wall -Wextra -Werror -std=c++98
+
+
+FORMAT:
+	-ClassName => UpperCamelCase.h/.cpp
+
+
+CANNOT USE PRINTF, ALLOC, FREE.
+
+NAMESPACE FORBIDDEN
+
