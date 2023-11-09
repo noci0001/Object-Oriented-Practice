@@ -23,7 +23,7 @@ int	main(void) {
     std::cout << std::endl << "!!!-----test fight -----!!!" << std::endl << std::endl;
 
     for (int i = 0; i < 5; i++) {
-        Obama.attack("Obama");
+        Obama.attack("Kim John Un");
         Kim_john_un.takeDamage(Kim_john_un.get_attack_damage());
         std::cout << std::endl;
     }
