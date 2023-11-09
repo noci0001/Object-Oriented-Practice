@@ -20,6 +20,8 @@ Fixed::Fixed(const int integerPart) {
 }
 
 //roundf find the nearest Integer to the provided floating point number.
+// "<<" in this context shifts the bits of the left operand to the left
+// by the number of positions specified by the right operand.
 Fixed::Fixed(const float integerPart) {
     std::cout << "Float constructor called" << std::endl;
     setRawBits(roundf(integerPart * (1 << _bits)));
@@ -39,16 +41,19 @@ Fixed& Fixed::operator=(const Fixed &other) {
     return (*this);
 }
 
-//Overload insertion that inserts a floating-point representation of a fixed-point number into the ostream
+//Overload insertion that inserts a floating-point representation
+// of a fixed-point number into the ostream
 std::ostream& operator<<(std::ostream& ostream_obj, const Fixed& fixed) {
     ostream_obj << fixed.toFloat();
     return (ostream_obj);
 }
 
+//Member function that converts the fixed-point value to a floating-point value
 float Fixed::toFloat(void) const {
     return ((float)(this->_val) / (float)(1 << this->_bits));
 }
 
+//Member function that converts the fixed-point value to an integer
 int Fixed::toInt(void) const {
     return this->_val >> this->_bits;
 }

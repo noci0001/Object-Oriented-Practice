@@ -3,10 +3,14 @@
 
 int main( void ) {
 
+    //Default constructor
     Fixed a;
+    //Copy constructor
     Fixed b( a );
+
     Fixed c;
 
+    //Copy assignment operator by operator overloading
     c = b;
 
     std::cout << a.getRawBits() << std::endl;

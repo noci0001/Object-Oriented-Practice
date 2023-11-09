@@ -103,6 +103,8 @@ Fixed Fixed::operator-(Fixed const &fixed_other){
 }
 
 Fixed Fixed::operator/(Fixed const &fixed_other){
+    if (fixed_other.toFloat() == 0)
+        throw std::runtime_error("Division by zero exception");
     Fixed result(this->toFloat() / fixed_other.toFloat());
     return result;
 }
@@ -124,11 +126,9 @@ Fixed& Fixed::operator--(void) {
     return(*this);
 }
 
-// Postfix decrement operator (--). Decrement the value of the object but return the original (unmodified)
-// object by value. In this case, a copy of the current object is made (Fixed result(*this)), then the
-// member variable _value is decremented, and finally, the copy of the original object (before decrement)
-//  is returned.
-Fixed Fixed::operator--(int) { //int = naming convention to differentiate from pre-decrement operator
+// Postfix decrement operator (--). decrement the value and return a copy
+// of the original object (by value).
+Fixed Fixed::operator--(int) {
     Fixed result(*this);
     this->_val--;
     return result;

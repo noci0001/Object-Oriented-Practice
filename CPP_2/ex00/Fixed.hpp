@@ -12,10 +12,14 @@ private:
     int _val;
     static const int _bits;
 public:
+    //Constructor
     Fixed();
+    //Destructor
     ~Fixed();
+    //Copy Constructor -> takes a reference to a constant Fixed Object as a parameter
     Fixed(const Fixed& other);
     Fixed operator=(const Fixed& other);
+    //Accessors
     int getRawBits( void ) const;
     void setRawBits( int const raw );
 };

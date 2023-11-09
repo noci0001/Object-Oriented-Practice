@@ -18,7 +18,9 @@
 
 int main( void ) {
     Fixed a;
+    //Construction of instance from an int
     Fixed const b( 10 );
+    //Construction of instance from a float
     Fixed const c( 42.42f );
     Fixed const d( b );
     a = Fixed( 1234.4321f );

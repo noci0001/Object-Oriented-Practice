@@ -1,4 +1,5 @@
 NAME	=	My_First_Class_in_Orthodox_Canonical_Form
+//Using appropriate flags for compiling C++98 code
 GCC		=	c++ -Wall -Wextra -Werror -pedantic -g -std=c++98
 SRC		=	main Fixed
 
