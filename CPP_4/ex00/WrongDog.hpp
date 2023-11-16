@@ -1,8 +1,8 @@
 #include "./WrongAnimal.hpp"
-#include "./WrongDog.hpp"
 
 #ifndef C_PLUS_PLUS_WRONGDOG_HPP
 #define C_PLUS_PLUS_WRONGDOG_HPP
+
 
 WrongDog::WrongDog() {
     std::cout << "WrongCat constructor called." << std::endl;

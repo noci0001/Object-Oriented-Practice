@@ -8,14 +8,14 @@
 #ifndef	WRONGDOG_HPP
 # define WRONGDOG_HPP
 
-class WrongDog : public WrongAnimal{
+class WrongCat : public WrongAnimal{
 private:
 
 public:
-    WrongDog();
-    WrongDog(const WrongDog& original);
-    WrongDog&	operator=(const WrongDog& original);
-    ~WrongDog();
+    WrongCat();
+    WrongCat(const WrongCat& original);
+    WrongCat&	operator=(const WrongCat& original);
+    ~WrongCat();
 
     void	makeSound() const;
 };

@@ -1,6 +1,6 @@
-NAME	= I_do_not_want_to_set_the_world_on_fire
+NAME	=	Polymorphism
 GCC		=	c++ -Wall -Wextra -Werror -pedantic -g -std=c++98
-SRC		=	Animal Cat Dog WrongAnimal main WrongDog Brain
+SRC		=	Animal Cat Dog WrongAnimal main WrongDog
 
 SRCS	=	$(addsuffix .cpp, $(SRC));
 

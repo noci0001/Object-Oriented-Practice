@@ -1,10 +1,9 @@
 #include "Animal.hpp"
-#include "Brain.hpp"
 
 class Dog : public Animal
 {
 private:
-    Brain *brain;
+
 public:
     Dog();
     Dog(const Dog &other);
@@ -12,5 +11,4 @@ public:
     ~Dog();
     std::string getType();
     void makeSound() const;
-    Brain& getBrain(void);
 };

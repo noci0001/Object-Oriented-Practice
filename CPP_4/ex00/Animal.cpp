@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Animal::Animal(): _type("Animal")
+Animal::Animal()
 {
     std::cout << "Animal Class constructor called!" << std::endl;
 }

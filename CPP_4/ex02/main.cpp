@@ -1,9 +1,12 @@
+#ifndef	MAIN_HPP
+# define MAIN_HPP
+
 #include <iostream>
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
-#include "WrongDog.hpp"
+#include "WrongCat.hpp"
 
 void subjectTest(){
 	std::cout << std::endl << "SUBJECT TEST - START" << std::endl << std::endl;
@@ -65,7 +68,7 @@ void wrongSubjectTest(){
 	std::cout << std::endl << "WRONG SUBJECT TEST - START" << std::endl;
 	{
 		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongDog();
+		const WrongAnimal* i = new WrongCat();
 
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound(); 
@@ -110,27 +113,29 @@ void testCat(){
 	}
 	std::cout << "CAT TEST - END" << std::endl;
 }
-void testAnimal(){
-	std::cout << std::endl << "ANIMAL TEST - START" << std::endl;
-	{
-		Animal stack_animal;
-		Animal *heap_animal = new Animal();
+// void testAnimal(){
+// 	std::cout << std::endl << "ANIMAL TEST - START" << std::endl;
+// 	{
+// 		Animal stack_animal;
+// 		Animal *heap_animal = new Animal();
 
-		std::cout << "stack_animal getType: " << stack_animal.getType() << std::endl;
-		std::cout << "stack_animal getType: ";
-		stack_animal.makeSound();
+// 		std::cout << "stack_animal getType: " << stack_animal.getType() << std::endl;
+// 		std::cout << "stack_animal getType: ";
+// 		stack_animal.makeSound();
 
-		std::cout << "heap_animal getType: " << heap_animal->getType() << std::endl;
-		std::cout << "heap_animal getType: ";
-		heap_animal->makeSound();
-		delete heap_animal;
-	}
-	std::cout << "ANIMAL TEST - END" << std::endl;
-}
+// 		std::cout << "heap_animal getType: " << heap_animal->getType() << std::endl;
+// 		std::cout << "heap_animal getType: ";
+// 		heap_animal->makeSound();
+// 		delete heap_animal;
+// 	}
+// 	std::cout << "ANIMAL TEST - END" << std::endl;
+// }
 int main(void){
 	subjectTest();
 	// testDog();
 	// testCat();
-	testAnimal();
+	//testAnimal();
 	return (0);
 }
+
+#endif
